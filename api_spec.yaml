@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Spotify Sample APIS
-  # Other metadata and annotations omitted for brevity.
+  
 spec:
   type: service
   owner: ecomm
