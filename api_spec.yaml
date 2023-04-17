@@ -14,9 +14,9 @@ metadata:
       title: API Spec
       icon: code
 spec:
-  type: openapi
-  lifecycle: experimental
-  owner: team-c
+  type: Provider
+  lifecycle: ADT
+  owner: ECOMMERCE
   definition: |
     openapi: "3.0.0"
     info:
