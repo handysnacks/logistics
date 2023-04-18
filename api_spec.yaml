@@ -16,7 +16,7 @@ metadata:
 spec:
   type: Provider
   lifecycle: ADT
-  owner: ECOMMERCE
+  owner: ECOMM
   definition: |
     openapi: "3.0.0"
     info:
