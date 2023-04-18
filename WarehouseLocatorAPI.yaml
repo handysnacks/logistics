@@ -15,9 +15,9 @@ spec:
   type: Provider
   lifecycle: ADT
   owner: Digital
-  definition: ""
+  definition: |
   swagger: "2.0"
-info:
+  info:
   title: WarehouseLocatorAPI
   version: v1
 host: api.costco.com
