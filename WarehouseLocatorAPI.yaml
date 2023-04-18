@@ -16,11 +16,10 @@ spec:
   lifecycle: ADT
   owner: Digital
   definition: |
-  swagger: "2.0"
-  info:
-  title: WarehouseLocatorAPI
-  version: v1
-host: api.costco.com
+    swagger: "2.0"
+    info:
+    title: WarehouseLocatorAPI
+    version: v1
 schemes:
   - https
 basePath: /warehouseLocator/v1
