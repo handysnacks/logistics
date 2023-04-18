@@ -1,5 +1,25 @@
 
-swagger: "2.0"
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: petstore
+  description: The petstore API
+  tags:
+    - store
+    - rest
+  links:
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: GitHub Repo
+      icon: github
+    - url: https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml
+      title: API Spec
+      icon: code
+spec:
+  type: Provider
+  lifecycle: ADT
+  owner: Digital
+  definition: |
+    swagger: "2.0"
 info: 
   title: "WarehouseLocatorAPI"
   version: "v1"
