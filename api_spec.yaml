@@ -16,7 +16,7 @@ metadata:
 spec:
   type: Provider
   lifecycle: ADT
-  owner: ECOMM
+  owner: Digital
   definition: |
     openapi: "3.0.0"
     info:
