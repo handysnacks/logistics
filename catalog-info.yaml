@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: logistics
+  annotations:
+    github.com/project-slug: handysnacks/logistics
+spec:
+  type: other
+  lifecycle: unknown
+  owner: engineers
