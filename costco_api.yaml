@@ -3,7 +3,6 @@ kind: API
 metadata:
   name: petstore
   description: The petstore API
-  description: An example of warehouse locator API interface with OpenAPI format.
 spec:
   type: openapi
   lifecycle: production
