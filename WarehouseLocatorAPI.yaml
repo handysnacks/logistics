@@ -1,16 +1,8 @@
----
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: WarehouseLocator
   description: The warehouse locator API
-  tags:
-    - store
-    - rest
-  links:
-    - url: https://github.com/swagger-api/swagger-petstore
-      title: GitHub Repo
-      icon: github
 spec:
   type: Provider
   lifecycle: ADT
@@ -29,34 +21,37 @@ produces:
 security:
   - costcoAPIKey: []
   - costcoAccessTokenPasswordFlow:
-      - https://api-adt.api.np.costco.com/
-      - https://api-qat.api.np.costco.com/
-      - https://api-spt.api.np.costco.com/
-      - https://api.costco.com/
+      - 'https://api-adt.api.np.costco.com/'
+      - 'https://api-qat.api.np.costco.com/'
+      - 'https://api-spt.api.np.costco.com/'
+      - 'https://api.costco.com/'
   - costcoAccessTokenPasswordAccessTokenFlow:
-      - https://api-adt.api.np.costco.com/
-      - https://api-qat.api.np.costco.com/
-      - https://api-spt.api.np.costco.com/
-      - https://api.costco.com/
+      - 'https://api-adt.api.np.costco.com/'
+      - 'https://api-qat.api.np.costco.com/'
+      - 'https://api-spt.api.np.costco.com/'
+      - 'https://api.costco.com/'
   - costcoBasicAuth: []
 paths:
   /warehouses:
     get:
       summary: search
-      description: The search operation, based on search parameters, could return more
-        than 1 warehouse. Search operation, handled as a part of HTTP GET
-        operation returns warehouses. The criteria elements are optional.
-        Criteria elements are latitude, longitude, postal code and filters.
+      description: >-
+        The search operation, based on search parameters, could return more than
+        1 warehouse. Search operation, handled as a part of HTTP GET operation
+        returns warehouses. The criteria elements are optional. Criteria
+        elements are latitude, longitude, postal code and filters.
       parameters:
         - name: latitude
           in: query
-          description: Defines the proximity to the Latitude coordinates referenced to a
+          description: >-
+            Defines the proximity to the Latitude coordinates referenced to a
             perticular location
           required: false
           type: number
         - name: longitude
           in: query
-          description: Defines the proximity to the Longitude coordinates referenced to a
+          description: >-
+            Defines the proximity to the Longitude coordinates referenced to a
             perticular location
           required: false
           type: number
@@ -67,13 +62,15 @@ paths:
           type: string
         - name: distanceUnit
           in: query
-          description: Defines the unit of mesure Longitude coordinates referenced to a
+          description: >-
+            Defines the unit of mesure Longitude coordinates referenced to a
             perticular location
           required: false
           type: string
         - name: country
           in: query
-          description: Defines the array of Countries where the resulting warehouses are
+          description: >-
+            Defines the array of Countries where the resulting warehouses are
             located
           required: false
           type: array
@@ -81,7 +78,8 @@ paths:
             type: string
         - name: region
           in: query
-          description: Defines the array of Regions where the resulting warehouses are
+          description: >-
+            Defines the array of Regions where the resulting warehouses are
             located
           required: false
           type: array
@@ -102,7 +100,8 @@ paths:
           format: date
         - name: fields
           in: query
-          description: Specifies one or more (comma-separated) dot-qualified field names
+          description: >-
+            Specifies one or more (comma-separated) dot-qualified field names
             that should be explicitly included in the result payload. Fields may
             be explicitly excluded by preceeding them with a '-'; excludes take
             precedence over includes for the same field.
@@ -110,9 +109,10 @@ paths:
           type: string
         - name: compressL10n
           in: query
-          description: "Specifies whether localized values (LocalizedStringType) within
-            the result payload should be compressed down to a single string
-            value for the field. "
+          description: >-
+            Specifies whether localized values (LocalizedStringType) within the
+            result payload should be compressed down to a single string value
+            for the field. 
           required: false
           type: boolean
         - name: Accept
@@ -136,7 +136,8 @@ paths:
           type: string
         - name: costco.TrackingId
           in: header
-          description: Allows the client to identify an individual transaction; this value
+          description: >-
+            Allows the client to identify an individual transaction; this value
             should be globally unique for each request. Backend integration
             components should propagate this value on every downstream request
             in order to properly correlate the entire transaction.
@@ -144,7 +145,8 @@ paths:
           type: string
         - name: costco.UserId
           in: header
-          description: Allows the client to specify the user for which the call is being
+          description: >-
+            Allows the client to specify the user for which the call is being
             performed; this is intended for logging/tracking purposes only in
             cases where the user cannot be identified from the security context.
             Security mechanisms should never rely on this value.
@@ -180,40 +182,42 @@ paths:
       security:
         - costcoAPIKey: []
         - costcoAccessTokenPasswordFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoAccessTokenPasswordAccessTokenFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoBasicAuth: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           schema:
-            $ref: "#/definitions/WarehouseSearchResponseType"
-        "400":
-          description: ""
+            $ref: '#/definitions/WarehouseSearchResponseType'
+        '400':
+          description: ''
           schema:
-            $ref: "#/definitions/PagedResultType"
-        "500":
-          description: ""
+            $ref: '#/definitions/PagedResultType'
+        '500':
+          description: ''
           schema:
-            $ref: "#/definitions/PagedResultType"
+            $ref: '#/definitions/PagedResultType'
     put:
       summary: synch
-      description: "The put operation updates the entire set of warehouses. Even
-        though the warehouse location data does not change often, the location
-        timing and gas prices could change often during the day. "
+      description: >-
+        The put operation updates the entire set of warehouses. Even though the
+        warehouse location data does not change often, the location timing and
+        gas prices could change often during the day. 
       parameters:
         - name: fields
           in: query
-          description: Specifies one or more (comma-separated) dot-qualified field names
+          description: >-
+            Specifies one or more (comma-separated) dot-qualified field names
             that should be explicitly included in the result payload. Fields may
             be explicitly excluded by preceeding them with a '-'; excludes take
             precedence over includes for the same field.
@@ -221,9 +225,10 @@ paths:
           type: string
         - name: compressL10n
           in: query
-          description: "Specifies whether localized values (LocalizedStringType) within
-            the result payload should be compressed down to a single string
-            value for the field. "
+          description: >-
+            Specifies whether localized values (LocalizedStringType) within the
+            result payload should be compressed down to a single string value
+            for the field. 
           required: false
           type: boolean
         - name: Accept
@@ -247,7 +252,8 @@ paths:
           type: string
         - name: costco.TrackingId
           in: header
-          description: Allows the client to identify an individual transaction; this value
+          description: >-
+            Allows the client to identify an individual transaction; this value
             should be globally unique for each request. Backend integration
             components should propagate this value on every downstream request
             in order to properly correlate the entire transaction.
@@ -255,7 +261,8 @@ paths:
           type: string
         - name: costco.UserId
           in: header
-          description: Allows the client to specify the user for which the call is being
+          description: >-
+            Allows the client to specify the user for which the call is being
             performed; this is intended for logging/tracking purposes only in
             cases where the user cannot be identified from the security context.
             Security mechanisms should never rely on this value.
@@ -269,36 +276,36 @@ paths:
         - name: body
           in: body
           schema:
-            $ref: "#/definitions/WarehousePostRequestType"
+            $ref: '#/definitions/WarehousePostRequestType'
       security:
         - costcoAPIKey: []
         - costcoAccessTokenPasswordFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoAccessTokenPasswordAccessTokenFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoBasicAuth: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           schema:
-            $ref: "#/definitions/ServiceResultType"
-        "400":
-          description: ""
+            $ref: '#/definitions/ServiceResultType'
+        '400':
+          description: ''
           schema:
-            $ref: "#/definitions/ServiceResultType"
-        "500":
-          description: ""
+            $ref: '#/definitions/ServiceResultType'
+        '500':
+          description: ''
           schema:
-            $ref: "#/definitions/ServiceResultType"
-  "/warehouses/{warehouseId}":
+            $ref: '#/definitions/ServiceResultType'
+  '/warehouses/{warehouseId}':
     get:
       summary: getWarehouse
       description: Returns a specific warehouse based on the warehouse Id.
@@ -310,7 +317,8 @@ paths:
           type: string
         - name: fields
           in: query
-          description: Specifies one or more (comma-separated) dot-qualified field names
+          description: >-
+            Specifies one or more (comma-separated) dot-qualified field names
             that should be explicitly included in the result payload. Fields may
             be explicitly excluded by preceeding them with a '-'; excludes take
             precedence over includes for the same field.
@@ -318,9 +326,10 @@ paths:
           type: string
         - name: compressL10n
           in: query
-          description: "Specifies whether localized values (LocalizedStringType) within
-            the result payload should be compressed down to a single string
-            value for the field. "
+          description: >-
+            Specifies whether localized values (LocalizedStringType) within the
+            result payload should be compressed down to a single string value
+            for the field. 
           required: false
           type: boolean
         - name: Accept
@@ -344,7 +353,8 @@ paths:
           type: string
         - name: costco.TrackingId
           in: header
-          description: Allows the client to identify an individual transaction; this value
+          description: >-
+            Allows the client to identify an individual transaction; this value
             should be globally unique for each request. Backend integration
             components should propagate this value on every downstream request
             in order to properly correlate the entire transaction.
@@ -352,7 +362,8 @@ paths:
           type: string
         - name: costco.UserId
           in: header
-          description: Allows the client to specify the user for which the call is being
+          description: >-
+            Allows the client to specify the user for which the call is being
             performed; this is intended for logging/tracking purposes only in
             cases where the user cannot be identified from the security context.
             Security mechanisms should never rely on this value.
@@ -366,36 +377,37 @@ paths:
       security:
         - costcoAPIKey: []
         - costcoAccessTokenPasswordFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoAccessTokenPasswordAccessTokenFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoBasicAuth: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           schema:
-            $ref: "#/definitions/WarehouseGetResponseType"
-        "400":
-          description: ""
+            $ref: '#/definitions/WarehouseGetResponseType'
+        '400':
+          description: ''
           schema:
-            $ref: "#/definitions/ServiceResultType"
-        "500":
-          description: ""
+            $ref: '#/definitions/ServiceResultType'
+        '500':
+          description: ''
           schema:
-            $ref: "#/definitions/ServiceResultType"
+            $ref: '#/definitions/ServiceResultType'
   /heartbeat:
     get:
       summary: heartbeat
-      description: Heartbeat operation checks if the service provider is able to
-        respond to requests.
+      description: >-
+        Heartbeat operation checks if the service provider is able to respond to
+        requests.
       parameters:
         - name: aliveAndWell
           in: query
@@ -404,7 +416,8 @@ paths:
           type: boolean
         - name: fields
           in: query
-          description: Specifies one or more (comma-separated) dot-qualified field names
+          description: >-
+            Specifies one or more (comma-separated) dot-qualified field names
             that should be explicitly included in the result payload. Fields may
             be explicitly excluded by preceeding them with a '-'; excludes take
             precedence over includes for the same field.
@@ -412,9 +425,10 @@ paths:
           type: string
         - name: compressL10n
           in: query
-          description: "Specifies whether localized values (LocalizedStringType) within
-            the result payload should be compressed down to a single string
-            value for the field. "
+          description: >-
+            Specifies whether localized values (LocalizedStringType) within the
+            result payload should be compressed down to a single string value
+            for the field. 
           required: false
           type: boolean
         - name: Accept
@@ -438,7 +452,8 @@ paths:
           type: string
         - name: costco.TrackingId
           in: header
-          description: Allows the client to identify an individual transaction; this value
+          description: >-
+            Allows the client to identify an individual transaction; this value
             should be globally unique for each request. Backend integration
             components should propagate this value on every downstream request
             in order to properly correlate the entire transaction.
@@ -446,7 +461,8 @@ paths:
           type: string
         - name: costco.UserId
           in: header
-          description: Allows the client to specify the user for which the call is being
+          description: >-
+            Allows the client to specify the user for which the call is being
             performed; this is intended for logging/tracking purposes only in
             cases where the user cannot be identified from the security context.
             Security mechanisms should never rely on this value.
@@ -460,31 +476,31 @@ paths:
       security:
         - costcoAPIKey: []
         - costcoAccessTokenPasswordFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoAccessTokenPasswordAccessTokenFlow:
-            - https://api-sandbox.api.np.costco.com/
-            - https://api-adt.api.np.costco.com/
-            - https://api-qat.api.np.costco.com/
-            - https://api-spt.api.np.costco.com/
-            - https://api.costco.com/
+            - 'https://api-sandbox.api.np.costco.com/'
+            - 'https://api-adt.api.np.costco.com/'
+            - 'https://api-qat.api.np.costco.com/'
+            - 'https://api-spt.api.np.costco.com/'
+            - 'https://api.costco.com/'
         - costcoBasicAuth: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           schema:
-            $ref: "#/definitions/StatusMessageType"
-        "400":
-          description: ""
+            $ref: '#/definitions/StatusMessageType'
+        '400':
+          description: ''
           schema:
-            $ref: "#/definitions/StatusMessageType"
-        "500":
-          description: ""
+            $ref: '#/definitions/StatusMessageType'
+        '500':
+          description: ''
           schema:
-            $ref: "#/definitions/StatusMessageType"
+            $ref: '#/definitions/StatusMessageType'
 securityDefinitions:
   costcoAPIKey:
     type: apiKey
@@ -494,81 +510,83 @@ securityDefinitions:
     type: oauth2
     description: OAuth2 Password Grant
     flow: password
-    tokenUrl: https://api-adt.costco.com/aad/v1/token
+    tokenUrl: 'https://api-adt.costco.com/aad/v1/token'
     scopes:
-      https://api-sandbox.api.np.costco.com/: JWT token scope for Sandbox API Gateway
-      https://api-adt.api.np.costco.com/: JWT token scope for ADT API Gateway
-      https://api-qat.api.np.costco.com/: JWT token scope for ADT API Gateway
-      https://api-spt.api.np.costco.com/: JWT token scope for ADT API Gateway
-      https://api.costco.com/: JWT token scope for ADT API Gateway
+      'https://api-sandbox.api.np.costco.com/': JWT token scope for Sandbox API Gateway
+      'https://api-adt.api.np.costco.com/': JWT token scope for ADT API Gateway
+      'https://api-qat.api.np.costco.com/': JWT token scope for ADT API Gateway
+      'https://api-spt.api.np.costco.com/': JWT token scope for ADT API Gateway
+      'https://api.costco.com/': JWT token scope for ADT API Gateway
   costcoAccessTokenPasswordAccessTokenFlow:
     type: oauth2
     description: OAuth2 Authorization Token Grant
     flow: accessCode
-    authorizationUrl: https://api-adt.costco.com/aad/v1/authorization
-    tokenUrl: https://api-adt.costco.com/aad/v1/token
+    authorizationUrl: 'https://api-adt.costco.com/aad/v1/authorization'
+    tokenUrl: 'https://api-adt.costco.com/aad/v1/token'
     scopes:
-      https://api-sandbox.api.np.costco.com/: JWT token scope for Sandbox API Gateway
-      https://api-adt.api.np.costco.com/: JWT token scope for ADT API Gateway
-      https://api-qat.api.np.costco.com/: JWT token scope for ADT API Gateway
-      https://api-spt.api.np.costco.com/: JWT token scope for ADT API Gateway
-      https://api.costco.com/: JWT token scope for ADT API Gateway
+      'https://api-sandbox.api.np.costco.com/': JWT token scope for Sandbox API Gateway
+      'https://api-adt.api.np.costco.com/': JWT token scope for ADT API Gateway
+      'https://api-qat.api.np.costco.com/': JWT token scope for ADT API Gateway
+      'https://api-spt.api.np.costco.com/': JWT token scope for ADT API Gateway
+      'https://api.costco.com/': JWT token scope for ADT API Gateway
   costcoBasicAuth:
     type: basic
 definitions:
   WarehousePostRequestType:
     properties:
       context:
-        $ref: "#/definitions/ServiceRequestContextType"
+        $ref: '#/definitions/ServiceRequestContextType'
         description: Represents contextual information associated with the request.
       warehouses:
         type: array
         items:
-          $ref: "#/definitions/WarehouseType"
+          $ref: '#/definitions/WarehouseType'
         description: Specifies the array of the warehouse set
     required:
       - context
   WarehouseSearchResponseType:
     properties:
       context:
-        $ref: "#/definitions/PagedResultContextType"
+        $ref: '#/definitions/PagedResultContextType'
         description: Represents contextual information associated with a Paged result.
       warehouses:
         type: array
         items:
-          $ref: "#/definitions/WarehouseType"
+          $ref: '#/definitions/WarehouseType'
         description: Specifies the array of the resulting warehouse set
   ServiceResultType:
     properties:
       context:
-        $ref: "#/definitions/ServiceResultContextType"
+        $ref: '#/definitions/ServiceResultContextType'
         description: Represents the contextual information associated with the result.
   PagedResultType:
     properties:
       context:
-        $ref: "#/definitions/PagedResultContextType"
+        $ref: '#/definitions/PagedResultContextType'
         description: Represents contextual information associated with a Paged result.
   WarehouseGetResponseType:
     properties:
       context:
-        $ref: "#/definitions/ServiceResultContextType"
+        $ref: '#/definitions/ServiceResultContextType'
         description: Represents the contextual information associated with the result.
       warehouse:
-        $ref: "#/definitions/WarehouseType"
+        $ref: '#/definitions/WarehouseType'
         description: Specifies the resulting warehouse
   StatusMessageType:
     properties:
       statusCode:
-        $ref: "#/definitions/StatusCodeType"
-        description: An enumeration value describing the overall nature of the message;
-          the 'Information' and 'Warning' values should be reserved for
+        $ref: '#/definitions/StatusCodeType'
+        description: >-
+          An enumeration value describing the overall nature of the message; the
+          'Information' and 'Warning' values should be reserved for
           'AdditionalStatusMessage' element values.
       errorCode:
         type: string
         description: A code representing the error.
       errorLocationId:
         type: string
-        description: A globally unique description of where the error originated; for
+        description: >-
+          A globally unique description of where the error originated; for
           example, this may include the name of the service/application,
           followed by a path to the location within code that triggered the
           error.
@@ -578,28 +596,32 @@ definitions:
       descriptions:
         type: array
         items:
-          $ref: "#/definitions/LocalizedStringType"
-        description: Human-readable descriptive text corresponding to the 'ErrorCode'
-          value provided.
+          $ref: '#/definitions/LocalizedStringType'
+        description: >-
+          Human-readable descriptive text corresponding to the 'ErrorCode' value
+          provided.
     required:
       - statusCode
   ServiceRequestContextType:
     properties:
       messageName:
         type: string
-        description: "A unique name describing the message. All messages of the same
-          type should carry the same 'MesageName' value. "
+        description: >-
+          A unique name describing the message. All messages of the same type
+          should carry the same 'MesageName' value. 
       timestamp:
         type: string
         format: date-time
         description: The time-stamp at which the message was created.
       sendingApplication:
         type: string
-        description: The name of the client/application sending the message. It allows
+        description: >-
+          The name of the client/application sending the message. It allows
           client to uniquely identify itself for tracking or logging purposes.
       trackingId:
         type: string
-        description: A globally unique id used to identify and correlate the transaction
+        description: >-
+          A globally unique id used to identify and correlate the transaction
           through various layers of distributed architecture. All endpoints
           processing this message should propagate the same tracking id value to
           downstream service calls or created messages, and for request and
@@ -607,14 +629,16 @@ definitions:
           returned with the response message.
       userId:
         type: string
-        description: Represents the user on behalf of whom the request is to be
-          performed. Any value passed on the message will be overridden by the
-          actual user principal name present in the runtime security context.
+        description: >-
+          Represents the user on behalf of whom the request is to be performed.
+          Any value passed on the message will be overridden by the actual user
+          principal name present in the runtime security context.
       localeCodes:
         type: array
         items:
           type: string
-        description: The locale code(s) in which the response details and error messages
+        description: >-
+          The locale code(s) in which the response details and error messages
           should be returned (for localized services).
       applicationName:
         type: string
@@ -627,7 +651,7 @@ definitions:
       name:
         type: array
         items:
-          $ref: "#/definitions/LocalizedStringType"
+          $ref: '#/definitions/LocalizedStringType'
         description: Specifies the particular resulting Warehouse Name
       distance:
         type: number
@@ -636,13 +660,13 @@ definitions:
         type: string
         description: Defines the unit of mesure referenced to a perticular location
       type:
-        $ref: "#/definitions/ClassificationType"
+        $ref: '#/definitions/ClassificationType'
         description: Defines the classification type of the resulting warehouse
       subType:
-        $ref: "#/definitions/ClassificationType"
+        $ref: '#/definitions/ClassificationType'
         description: Defines the Minor classification type of the resulting warehouse
       address:
-        $ref: "#/definitions/AddressType"
+        $ref: '#/definitions/AddressType'
         description: Defines physical address of the resulting warehouse
       phone:
         type: string
@@ -653,17 +677,17 @@ definitions:
       hours:
         type: array
         items:
-          $ref: "#/definitions/HoursType"
+          $ref: '#/definitions/HoursType'
         description: Specifies the hours of operation of the resulting warehouse
       holidays:
         type: array
         items:
-          $ref: "#/definitions/HolidayType"
+          $ref: '#/definitions/HolidayType'
         description: Specifies the holidays observed of the resulting warehouse
       services:
         type: array
         items:
-          $ref: "#/definitions/ServiceType"
+          $ref: '#/definitions/ServiceType'
         description: Specifies the services offered in the resulting warehouse
       regionCode:
         type: string
@@ -676,41 +700,45 @@ definitions:
     properties:
       messageName:
         type: string
-        description: "A unique name describing the message. All messages of the same
-          type should carry the same 'MesageName' value. "
+        description: >-
+          A unique name describing the message. All messages of the same type
+          should carry the same 'MesageName' value. 
       timestamp:
         type: string
         format: date-time
         description: The time-stamp at which the message was created.
       sendingApplication:
         type: string
-        description: The name of the client/application sending the message. It allows
+        description: >-
+          The name of the client/application sending the message. It allows
           client to uniquely identify itself for tracking or logging purposes.
       trackingId:
         type: string
-        description: A globally unique id used to identify and correlate the transaction
+        description: >-
+          A globally unique id used to identify and correlate the transaction
           through various layers of distributed architecture. All endpoints
           processing this message should propagate the same tracking id value to
           downstream service calls or created messages, and for request and
           response message pattern, the same tracking id value should be
           returned with the response message.
       statusMessage:
-        $ref: "#/definitions/StatusMessageType"
+        $ref: '#/definitions/StatusMessageType'
         description: Reflects the overall status of the response.
       additionalStatusMessages:
         type: array
         items:
-          $ref: "#/definitions/StatusMessageType"
-        description: " Reflects any additional associated status messages that need to
-          be reflected back to the consumer."
+          $ref: '#/definitions/StatusMessageType'
+        description: ' Reflects any additional associated status messages that need to be reflected back to the consumer.'
       lastPage:
         type: boolean
-        description: Indicates whether this particular page is the last page for the
+        description: >-
+          Indicates whether this particular page is the last page for the
           particular query.
       totalResults:
         type: integer
         format: int32
-        description: Count of total results for the query; this value should only be
+        description: >-
+          Count of total results for the query; this value should only be
           populated on the first page of the request (if
           CountRequiredWithFirstResult was true); otherwise, a value of '-1'
           indicates that the results were not counted.
@@ -718,33 +746,35 @@ definitions:
     properties:
       messageName:
         type: string
-        description: "A unique name describing the message. All messages of the same
-          type should carry the same 'MesageName' value. "
+        description: >-
+          A unique name describing the message. All messages of the same type
+          should carry the same 'MesageName' value. 
       timestamp:
         type: string
         format: date-time
         description: The time-stamp at which the message was created.
       sendingApplication:
         type: string
-        description: The name of the client/application sending the message. It allows
+        description: >-
+          The name of the client/application sending the message. It allows
           client to uniquely identify itself for tracking or logging purposes.
       trackingId:
         type: string
-        description: A globally unique id used to identify and correlate the transaction
+        description: >-
+          A globally unique id used to identify and correlate the transaction
           through various layers of distributed architecture. All endpoints
           processing this message should propagate the same tracking id value to
           downstream service calls or created messages, and for request and
           response message pattern, the same tracking id value should be
           returned with the response message.
       statusMessage:
-        $ref: "#/definitions/StatusMessageType"
+        $ref: '#/definitions/StatusMessageType'
         description: Reflects the overall status of the response.
       additionalStatusMessages:
         type: array
         items:
-          $ref: "#/definitions/StatusMessageType"
-        description: " Reflects any additional associated status messages that need to
-          be reflected back to the consumer."
+          $ref: '#/definitions/StatusMessageType'
+        description: ' Reflects any additional associated status messages that need to be reflected back to the consumer.'
   StatusCodeType:
     enum:
       - Success
@@ -771,7 +801,7 @@ definitions:
       name:
         type: array
         items:
-          $ref: "#/definitions/LocalizedStringType"
+          $ref: '#/definitions/LocalizedStringType'
         description: Specifies the particular resulting classification type definition
     required:
       - code
@@ -794,25 +824,31 @@ definitions:
         description: A territorial division of a country.
       postalCode:
         type: string
-        description: A group of numbers or characters used to identity a mail delivery area.
+        description: >-
+          A group of numbers or characters used to identity a mail delivery
+          area.
       countryName:
         type: string
         description: Label by which the country is commonly known.
       countryISO2Char:
         type: string
-        description: Two-letter country code as defined in ISO 3166-1 and published by
-          the International Organization for Standardization.
+        description: >-
+          Two-letter country code as defined in ISO 3166-1 and published by the
+          International Organization for Standardization.
       countryISO3Char:
         type: string
-        description: Three-letter country code as defined in ISO 3166-1 and published by
+        description: >-
+          Three-letter country code as defined in ISO 3166-1 and published by
           the International Organization for Standardization.
       latitude:
         type: number
-        description: The angular distance north or south of the earth's equator,
-          measured in degrees along a meridian.
+        description: >-
+          The angular distance north or south of the earth's equator, measured
+          in degrees along a meridian.
       longitude:
         type: number
-        description: Angular distance on the earth's surface, measured east or west from
+        description: >-
+          Angular distance on the earth's surface, measured east or west from
           the prime meridian at Greenwich, England.
       geoText:
         type: string
@@ -822,7 +858,7 @@ definitions:
       title:
         type: array
         items:
-          $ref: "#/definitions/LocalizedStringType"
+          $ref: '#/definitions/LocalizedStringType'
         description: Identifies the title of the hours type
       weekDays:
         type: array
@@ -831,7 +867,7 @@ definitions:
           format: int32
         description: Identifies the week days
       hoursType:
-        $ref: "#/definitions/ClassificationType"
+        $ref: '#/definitions/ClassificationType'
         description: Identifies hour type and definition
       open:
         type: string
@@ -848,13 +884,13 @@ definitions:
       name:
         type: array
         items:
-          $ref: "#/definitions/LocalizedStringType"
+          $ref: '#/definitions/LocalizedStringType'
         description: Identifies the holiday observed
       holidayHoursType:
-        $ref: "#/definitions/ClassificationType"
+        $ref: '#/definitions/ClassificationType'
         description: Identifies the classification of the hours type during the Holiday
       hour:
-        $ref: "#/definitions/HoursType"
+        $ref: '#/definitions/HoursType'
         description: Identifies the hour definition of the resulting warehouse
     required:
       - holidayDate
@@ -867,12 +903,13 @@ definitions:
         description: Identifies the Service Identification
       code:
         type: string
-        description: Identifies the clasification code of the service of the resulting
+        description: >-
+          Identifies the clasification code of the service of the resulting
           warehouse
       name:
         type: array
         items:
-          $ref: "#/definitions/LocalizedStringType"
+          $ref: '#/definitions/LocalizedStringType'
         description: Specifies the particular resulting Service type definition
       phone:
         type: string
@@ -880,13 +917,14 @@ definitions:
       hours:
         type: array
         items:
-          $ref: "#/definitions/HoursType"
-        description: Defines the array of day(s) of the week and hours or operation of
-          the services within the resulting
+          $ref: '#/definitions/HoursType'
+        description: >-
+          Defines the array of day(s) of the week and hours or operation of the
+          services within the resulting
       productPrices:
         type: array
         items:
-          $ref: "#/definitions/ProductPriceType"
+          $ref: '#/definitions/ProductPriceType'
         description: Defines the array of products' prices
       fax:
         type: string
@@ -899,7 +937,7 @@ definitions:
       description:
         type: array
         items:
-          $ref: "#/definitions/LocalizedStringType"
+          $ref: '#/definitions/LocalizedStringType'
         description: Specifies the particular product Price type definition
       currency:
         type: string
