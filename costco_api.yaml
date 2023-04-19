@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: wayback-search
-  title: Wayback search API
-  description: An example of an API interface with OpenAPI format.
+  name: Warehouse Locator
+  title: Warehouse Locator API
+  description: An example of warehouse locator API interface with OpenAPI format.
 spec:
   type: openapi
   lifecycle: production
