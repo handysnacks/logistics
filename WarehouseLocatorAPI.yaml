@@ -10,8 +10,8 @@ spec:
   definition: |
     swagger: "2.0"
     info:
-    title: WarehouseLocatorAPI
-    version: v1
+      title: "WarehouseLocatorAPI"
+      version: "v1"
 schemes:
   - https
 basePath: /warehouseLocator/v1
