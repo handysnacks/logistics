@@ -7,8 +7,6 @@ spec:
     type: Provider
     lifecycle: ADT
     owner: Digital
-    definition: |
-    openapi: 3.0.0
 info:
   title: WarehouseLocatorAPI
   version: v1-oas3
@@ -125,15 +123,6 @@ paths:
           required: false
           schema:
             type: boolean
-        - name: Accept
-          in: header
-          description: Specifies the media/content type requested by the client.
-          required: false
-          style: simple
-          schema:
-            type: array
-            items:
-              type: string
         - name: costco.LocaleCode
           in: header
           description: Specifies the locale codes (languages) desired by the client.
@@ -272,15 +261,6 @@ paths:
           required: false
           schema:
             type: boolean
-        - name: Accept
-          in: header
-          description: Specifies the media/content type requested by the client.
-          required: false
-          style: simple
-          schema:
-            type: array
-            items:
-              type: string
         - name: costco.LocaleCode
           in: header
           description: Specifies the locale codes (languages) desired by the client.
@@ -400,15 +380,6 @@ paths:
           required: false
           schema:
             type: boolean
-        - name: Accept
-          in: header
-          description: Specifies the media/content type requested by the client.
-          required: false
-          style: simple
-          schema:
-            type: array
-            items:
-              type: string
         - name: costco.LocaleCode
           in: header
           description: Specifies the locale codes (languages) desired by the client.
@@ -525,15 +496,6 @@ paths:
           required: false
           schema:
             type: boolean
-        - name: Accept
-          in: header
-          description: Specifies the media/content type requested by the client.
-          required: false
-          style: simple
-          schema:
-            type: array
-            items:
-              type: string
         - name: costco.LocaleCode
           in: header
           description: Specifies the locale codes (languages) desired by the client.
