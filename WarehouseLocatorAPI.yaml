@@ -2,7 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: WarehouseLocator
-  description: LocatorAPI
+  title: Warehouse search API
+  description: Locate warehouse API interface with OpenAPI format.
   tags: 
     - locator
     - costco
