@@ -1,17 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: petstore
-  description: The petstore API
+  name: Warehouse Locator
+  description: Warehouse Locator API
   tags:
-    - store
-    - rest
+    - warehouse 
+    - locator
+    - costco
   links:
     - url: https://github.com/swagger-api/swagger-petstore
-      title: GitHub Repo
+      title: swagger definition Warehouse Locator
       icon: github
     - url: https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml
-      title: API Spec
+      title: Source yaml location
       icon: code
 spec:
   type: Provider
