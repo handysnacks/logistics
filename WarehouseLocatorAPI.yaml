@@ -16,6 +16,8 @@ metadata:
       icon: code
 spec:
   type: Provider
+  providesApis: AS400
+  consumesApis: Integration,Ecomm
   lifecycle: ADT
   owner: Digital
   definition: | 
