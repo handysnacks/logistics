@@ -2,9 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: Warehouse
-  description: Locator_API
-  tags:
-    - Warehouse 
+  description: LocatorAPI
+  tags: 
     - locator
     - costco
   links:
