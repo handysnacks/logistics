@@ -13,6 +13,6 @@ spec:
   owner: group:Enterprise Services Development
   system: QA region
   providesApis:
-    - Warehouse search API
+    - WarehousesearchAPI
   consumesApis:
     - petstore
