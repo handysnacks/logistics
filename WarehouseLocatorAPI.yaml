@@ -16,7 +16,7 @@ metadata:
       icon: code
 spec:
   type: Provider
-  providesApis: {Name : AS400}
+  providesApis: petstore
   consumesApis: {Name : Ecomm}
   lifecycle: ADT
   owner: Digital
