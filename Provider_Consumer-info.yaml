@@ -17,4 +17,4 @@ spec:
   providesApis: 
     - petstore
   consumesApis:
-    - {Mobile,EComm}
+    - Mobile
