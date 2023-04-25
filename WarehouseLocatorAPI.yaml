@@ -6,7 +6,7 @@ metadata:
   description: Locate warehouse API interface with OpenAPI format.
   annotations: 
     github.com/project-slug: handysnacks/logistics
-    backstage.io/techdocs-ref: url:https://costcoitrepository.atlassian.net/wiki/spaces/HTUTS/overview?mode=global
+    backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/spaces/ES/overview
   tags: 
     - locator
     - costco
