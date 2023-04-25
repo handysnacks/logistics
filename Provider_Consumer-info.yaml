@@ -5,6 +5,7 @@ metadata:
   description: define dependency providers and consumers
   annotations: 
     github.com/project-slug: handysnacks/logistics
+    backstage.io/techdocs-ref: dir:.
     jenkins.io/job-full-name: ECOM_WCS_REACT/WCS_MSC_poc
 spec:
   type: service
@@ -15,3 +16,5 @@ spec:
     - Warehouse search API
   consumesApis:
     - Wayback archive API
+  dependsOn:
+    - component:default/www-artist
