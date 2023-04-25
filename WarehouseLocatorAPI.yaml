@@ -16,6 +16,7 @@ metadata:
       icon: github
     - url: https://costcointegration.atlassian.net/wiki/x/mwCH
       title: confluencelink
+      icon: code
     - url: https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml
       title: Source
       icon: code
