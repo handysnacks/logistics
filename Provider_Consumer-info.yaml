@@ -13,7 +13,7 @@ spec:
   owner: group:Enterprise Services Development
   system: QA region
   providesApis:
-    - Warehouse search API
+    - WarehouseLocatorAPI
   consumesApis:
     - Wayback archive API
   dependsOn:
