@@ -1,0 +1,8 @@
+site_name: 'Warehouse search API component'
+site_description: 'Documentation for the wayback-search component'
+
+plugins:
+  - techdocs-core
+
+nav:
+  - Overview: https://docs.google.com/document/d/1tY7Xy_oc1rhkOJ8ltS7vdNzyapw5Php2NAdxQnxSRBc/edit#heading=h.kcajms1k1uvf
