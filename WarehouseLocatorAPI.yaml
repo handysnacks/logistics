@@ -6,7 +6,7 @@ metadata:
   description: Locate warehouse API interface with OpenAPI format.
   annotations: 
     github.com/project-slug: handysnacks/logistics
-    backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/spaces/ES/overview
+    backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/x/mwCH
   tags: 
     - locator
     - costco
@@ -14,6 +14,8 @@ metadata:
     - url: https://github.com/swagger-api/swagger-petstore
       title: swagger_definition_Warehouse_Locator
       icon: github
+    - url: https://costcointegration.atlassian.net/wiki/x/mwCH
+      title: confluencelink
     - url: https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml
       title: Source
       icon: code
