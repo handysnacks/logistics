@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Warehouse search API
+  name: WarehousesearchAPI
   description: define dependency providers and consumers
   annotations: 
     jenkins.io/job-full-name: ECOM_WCS_REACT/WCS_MSC_poc
