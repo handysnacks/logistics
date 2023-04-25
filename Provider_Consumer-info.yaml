@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: WarehousesearchAPI
   description: define dependency providers and consumers
+  providesApi: WarehouseLocatorAPI
   annotations: 
     github.com/project-slug: handysnacks/logistics
     backstage.io/techdocs-ref: dir:.
