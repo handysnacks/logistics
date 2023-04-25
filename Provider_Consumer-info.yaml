@@ -1,20 +1,17 @@
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: www-ecomm
-  description: handysnacks ecommsite
-  providesApi: petstore    
-  annotations:
-    github.com/project-slug: handysnacks/eComm
-    backstage.io/techdocs-ref: dir:.
+  name: Warehouse search API
+  description: define dependency providers and consumers
+  annotations: 
     jenkins.io/job-full-name: ECOM_WCS_REACT/WCS_MSC_poc
 spec:
-  type: website
-  lifecycle: production
-  owner: eComm
-  version: "1.0"
-  system: testing
-  providesApis: 
-    - petstore  
-  dependsOn:
-    - component:default/www-artist
+  type: service
+  lifecycle: QAT
+  owner: group:Enterprise Services Development
+  system: QA region
+  providesApis:
+    - Warehouse search API
+  consumesApis:
+    - petstore
