@@ -4,6 +4,9 @@ metadata:
   name: WarehouseLocator
   title: Warehouse search API
   description: Locate warehouse API interface with OpenAPI format.
+  annotations: 
+    github.com/project-slug: handysnacks/logistics
+    backstage.io/techdocs-ref: https://docs.google.com/document/d/1tY7Xy_oc1rhkOJ8ltS7vdNzyapw5Php2NAdxQnxSRBc/edit#heading=h.kcajms1k1uvf
   tags: 
     - locator
     - costco
