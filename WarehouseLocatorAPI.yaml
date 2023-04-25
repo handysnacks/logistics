@@ -11,14 +11,8 @@ metadata:
     - locator
     - costco
   links:
-    - url: https://github.com/swagger-api/swagger-petstore
-      title: swagger_definition_Warehouse_Locator
-      icon: github
     - url: https://costcointegration.atlassian.net/wiki/x/mwCH
       title: confluencelink
-      icon: code
-    - url: https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml
-      title: Source
       icon: code
 spec:
   type: Provider
