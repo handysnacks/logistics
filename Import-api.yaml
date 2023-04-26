@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: wayback-search
-  title: Wayback search API
+  name: Import-NewAPI
+  title: Sample import API
   description: An example of an API interface with OpenAPI format.
   tags: 
     - opensource
@@ -19,4 +19,4 @@ spec:
   lifecycle: production
   owner: team-alpha
   definition:
-    $text: https://github.com/APIs-guru/openapi-directory/blob/dab6854d4d599aafb0eb36e6c7ae1fe0c37509b7/APIs/twitter.com/current/2.8/openapi.yaml
+    $text: https://github.com/handysnacks/logistics/blob/main/openapi.yaml
