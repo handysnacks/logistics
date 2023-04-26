@@ -20,7 +20,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: ADT
-  owner: Enterprise Services Development
+  owner: enterprise-services-development
   providesApis:
     - hello-world 
   consumesApis: 
