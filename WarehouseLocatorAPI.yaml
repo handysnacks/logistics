@@ -19,10 +19,13 @@ metadata:
       icon: code
 spec:
   type: openapi
-  providesApis: petstore
-  consumesApis: MobileApp
   lifecycle: ADT
   owner: Enterprise Services Development
+  providesApis:
+    - hello-world 
+  consumesApis: 
+    - Warehouse search API
+    - MobileApp
   profile:
     displayName: Enterprise Services Development
     email: is-servicesdevelopment@costco.com
