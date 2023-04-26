@@ -29,7 +29,7 @@ spec:
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: ops
   children: [backstage, other]
-  members: [kseeber, chandra]
+  members: [kseeber]
   definition: | 
     openapi: "3.0.0"
     info:
