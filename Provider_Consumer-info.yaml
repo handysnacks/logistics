@@ -16,6 +16,7 @@ spec:
   providesApis:
     - Warehouse search API
     - hello-world 
-  consumesApis: petstore
+  consumesApis: 
+    - petstore
   dependsOn:
     - component:default/www-artist
