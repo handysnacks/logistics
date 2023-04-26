@@ -13,8 +13,6 @@ spec:
   lifecycle: QAT
   owner: group:Enterprise Services Development
   system: QA region
-  providesApis:
-    - 
   consumesApis:
     - Wayback archive API
   providesApis:
