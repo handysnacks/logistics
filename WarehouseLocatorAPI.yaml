@@ -8,8 +8,8 @@ metadata:
     github.com/project-slug: handysnacks/logistics
     backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/x/mwCH
   tags: 
-    - V1
-    - V2
+    - v1
+    - v2
   links:
     - url: https://costcointegration.atlassian.net/wiki/x/mwCH
       title: confluencelink
