@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: Provider
+kind: API
 metadata:
   name: WarehousesearchAPI
   description: define dependency providers and consumers
