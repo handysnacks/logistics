@@ -14,9 +14,9 @@ spec:
   owner: group:Enterprise Services Development
   system: QA region
   providesApis:
-    - Warehouse search API
     - hello-world 
   consumesApis: 
+    - Warehouse search API
     - petstore
   dependsOn:
     - component:default/www-artist
