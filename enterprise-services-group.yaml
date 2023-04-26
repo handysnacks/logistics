@@ -1,0 +1,48 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Enterprise Services Development
+  title: Enterprise Services Development
+  description: Enterprise Services Development Team
+spec:
+  type: team
+  profile:
+    displayName: Enterprise Services Development Team
+    # Intentional no displayName for testing
+    email: is-servicesdevelopment@costco.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: engineers
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Avdeshkumar Rai
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: avdeshkumarrai@costco.com
+    picture: https://avatars.dicebear.com/api/avataaars/nigel-manning@example.com.svg?background=%23fff
+  memberOf: [Enterprise Services Development]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Terry Ashley
+spec:
+  profile:
+    displayName: Terry Ashley
+    email: terryashley@costco.com
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [Enterprise Services Development]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Chandrashekar Allipuram
+spec:
+  profile:
+    displayName: Chandrashekar Allipuram
+    email: callipuram@costco.com
+    picture: https://avatars.dicebear.com/api/avataaars/guest@example.com.svg?background=%23fff
+  memberOf: [Enterprise Services Development]
