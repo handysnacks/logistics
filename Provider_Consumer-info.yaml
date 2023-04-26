@@ -13,8 +13,6 @@ spec:
   lifecycle: QAT
   owner: group:Enterprise Services Development
   system: QA region
-  consumesApis:
-    - Wayback archive API
   providesApis:
     - Warehouse search API
     - hello-world 
