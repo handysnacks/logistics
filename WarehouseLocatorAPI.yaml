@@ -1,18 +1,6 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Enterprise Services Development
-  description: The infra business unit
-spec:
-  type: business-unit
-  profile:
-    displayName: Enterprise Services Development
-    email: is-servicesdevelopment@costco.com
-    picture: https://example.com/groups/bu-infrastructure.jpeg
-  parent: ops
-  children: [backstage, other]
-  members: [kseeber, chandra]
-metadata:
   name: WarehouseLocator
   title: Warehouse search API
   description: Locate warehouse API interface with OpenAPI format.
@@ -35,6 +23,13 @@ spec:
   consumesApis: MobileApp
   lifecycle: ADT
   owner: Enterprise Services Development
+  profile:
+    displayName: Enterprise Services Development
+    email: is-servicesdevelopment@costco.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: ops
+  children: [backstage, other]
+  members: [kseeber, chandra]
   definition: | 
     openapi: "3.0.0"
     info:
