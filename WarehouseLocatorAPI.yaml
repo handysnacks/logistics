@@ -18,11 +18,11 @@ metadata:
       title: googledoc
       icon: code
 spec:
-  type: Provider
+  type: openapi
   providesApis: petstore
-  consumesApis: {Name : Ecomm}
+  consumesApis: MobileApp
   lifecycle: ADT
-  owner: Digital
+  owner: Enterprise Services Development
   definition: | 
     openapi: "3.0.0"
     info:
