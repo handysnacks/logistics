@@ -11,4 +11,4 @@ spec:
     email: it-engineers@costco.com
     picture: https://avatars.dicebear.com/api/identicon/backstage@example.com.svg?background=%23fff&margin=25
   parent: infrastructure
-  children: [Enterprise Services Development]
+  children: [enterprise-services-development]
