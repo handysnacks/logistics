@@ -8,8 +8,8 @@ metadata:
     github.com/project-slug: handysnacks/logistics
     backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/x/mwCH
   tags: 
-    - locator
-    - costco
+    - V1.0.0
+    - V2.0.0
   links:
     - url: https://costcointegration.atlassian.net/wiki/x/mwCH
       title: confluencelink
