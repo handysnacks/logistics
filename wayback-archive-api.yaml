@@ -1,19 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: wayback-archive
-  title: Wayback archive API
+  name: SAMPLE-archive
+  title: SAMPLE archive API
   description: Archive API for the wayback machine
-  tags: 
-    - opensource
-    - sample
-  links:
-    - url: https://costcointegration.atlassian.net/wiki/x/mwCH
-      title: linkplaceholder
-      icon: code
-    - url: https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/api-with-examples.yaml
-      title: OpenAPI-Specification
-      icon: github
 spec:
   type: openapi
   lifecycle: production
