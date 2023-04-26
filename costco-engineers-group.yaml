@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Costco engineers
+  name: costco-engineers
   title: Engineers group
   description: The engineers sub-department
 spec:
