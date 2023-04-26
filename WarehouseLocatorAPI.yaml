@@ -11,7 +11,7 @@ spec:
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: ops
   children: [backstage, other]
-  members: [kseeber]
+  members: [kseeber, chandra]
 metadata:
   name: WarehouseLocator
   title: Warehouse search API
