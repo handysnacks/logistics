@@ -29,7 +29,6 @@ spec:
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: ops
   children: [backstage, other]
-  RELATION_MEMBER_OF = "memberOf"
   members: [kseeber]
   definition: | 
     openapi: "3.0.0"
