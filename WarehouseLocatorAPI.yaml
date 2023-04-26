@@ -30,7 +30,7 @@ spec:
     displayName: Enterprise Services Development
     email: is-servicesdevelopment@costco.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
-  parent: ops
+  parent: engineers
   children: [backstage, other]
   members: [kseeber]
   definition: | 
