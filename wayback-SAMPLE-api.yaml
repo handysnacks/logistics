@@ -17,6 +17,6 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: team-alpha
+  owner: enterprise-services-development
   definition:
     $text: https://github.com/handysnacks/logistics/blob/main/openapi.yaml
