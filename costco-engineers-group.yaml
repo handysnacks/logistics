@@ -1,13 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: engineers
+  name: Costco engineers
   title: Engineers group
   description: The engineers sub-department
 spec:
   type: sub-department
   profile:
-    displayName: Engineers
+    displayName: Costco Engineers
     email: it-engineers@costco.com
     picture: https://avatars.dicebear.com/api/identicon/backstage@example.com.svg?background=%23fff&margin=25
   parent: infrastructure
