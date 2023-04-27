@@ -617,7 +617,7 @@ spec:
                   schema:
                     $ref: '#/components/schemas/StatusMessageType'
     servers:
-      - url: https://sb-rest-adt.np.costco.com/warehouseLocator/v1
+      - url: https://sb-rest-adt.np.costco.com/warehouseLocatorMobile/v1
     components:
       securitySchemes:
         costcoAPIKey:
