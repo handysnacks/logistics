@@ -6,7 +6,11 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main/WarehouseLocatorAPI.yaml" ]
+    branches: [ "main" ]
+    # You can even set it to run only when TechDocs related files are updated.
+    paths:
+        - "docs/**"
+        - "WarehouseLocatorAPI.yaml"
   pull_request:
     branches: [ "main" ]
 
