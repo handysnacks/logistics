@@ -36,7 +36,6 @@ spec:
   profile:
     displayName: Enterprise Services Development
     email: is-servicesdevelopment@costco.com
-    picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: engineers
   children: [backstage, other]
   members: [kseeber]
