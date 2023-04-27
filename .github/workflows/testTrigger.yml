@@ -10,7 +10,7 @@ on:
     # You can even set it to run only when TechDocs related files are updated.
     paths:
         - "docs/**"
-        - "WarehouseLocatorAPI.yaml"
+        - "../../WarehouseLocatorAPI.yaml"
   pull_request:
     branches: [ "main" ]
 
