@@ -19,7 +19,7 @@ metadata:
       title: googledoc
       icon: code
     - url: https://ertj.corp.costco.com/view/DataPower/job/_DataPower_build_gitHub/
-      title: googledoc
+      title: jenkins
       icon: code
 spec:
   type: openapi
