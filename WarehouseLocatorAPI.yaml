@@ -7,7 +7,7 @@ metadata:
   annotations: 
     github.com/project-slug: handysnacks/logistics
     backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/x/mwCH
-    jenkins.io/job-full-name: DataPower_GitHub_Coordinator
+    jenkins.io/job-full-name: OMS_EndPoint_Status_Update_Google_Chart
   tags: 
     - v1
     - v2
