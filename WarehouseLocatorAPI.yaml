@@ -45,8 +45,8 @@ spec:
     info:
     title: WarehouseLocatorAPI
     version: v1-oas3
-  schemes:
-    - http
+    schemes:
+      - http
     security:
       - costcoAPIKey: []
       - costcoAccessTokenPasswordFlow:
