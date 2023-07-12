@@ -15,7 +15,7 @@ metadata:
     - url: https://costcointegration.atlassian.net/wiki/x/mwCH
       title: confluencelink
       icon: code
-    - url: https://dev70272.service-now.com/now/nav/ui/classic/params/target/com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D3f1dd0320a0a0b99000a53f7604a2ef9
+    - url: https://dev70272.service-now.com/
       title: ServiceNow Link
       icon: code
     - url: https://docs.google.com/document/d/1tY7Xy_oc1rhkOJ8ltS7vdNzyapw5Php2NAdxQnxSRBc/edit#heading=h.kcajms1k1uvf
