@@ -11,9 +11,6 @@ metadata:
     - v1
     - v2
   links:
-    - url: https://costcointegration.atlassian.net/wiki/x/mwCH
-      title: confluencelink
-      icon: code
     - url: https://dev70272.service-now.com/
       title: ServiceNow Link
       icon: code
