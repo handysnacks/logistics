@@ -32,10 +32,9 @@ spec:
   lifecycle: ADT
   owner: enterprise-services-development
   providesApis:
-    - hello-world 
-  consumesApis: 
-    - Warehouse search API
-    - MobileApp
+    - wayback-search
+  consumesApis:
+    - wayback-archive
   profile:
     displayName: Enterprise Services Development
     email: is-servicesdevelopment@costco.com
