@@ -14,6 +14,9 @@ metadata:
     - url: https://dev70272.service-now.com/
       title: ServiceNow Link
       icon: code
+    - url: https://costcointegration.atlassian.net/wiki/x/mwCH
+      title: confluencelink
+      icon: code
     - url: https://docs.google.com/document/d/1tY7Xy_oc1rhkOJ8ltS7vdNzyapw5Php2NAdxQnxSRBc/edit#heading=h.kcajms1k1uvf
       title: consumer_guide googledoc
       icon: code
