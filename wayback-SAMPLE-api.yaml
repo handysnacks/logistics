@@ -14,6 +14,21 @@ metadata:
     - url: https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/api-with-examples.yaml
       title: OpenAPI-Specification
       icon: github
+    - url: https://costcointegration.atlassian.net/wiki/x/mwCH
+      title: confluencelink
+      icon: code
+    - url: https://dev70272.service-now.com/
+      title: ServiceNow Link
+      icon: code
+    - url: https://docs.google.com/document/d/1tY7Xy_oc1rhkOJ8ltS7vdNzyapw5Php2NAdxQnxSRBc/edit#heading=h.kcajms1k1uvf
+      title: consumer_guide googledoc
+      icon: code
+    - url: https://docs.google.com/document/d/1ULe_PTX0VcWBZcaoznC6uGn3-5ePMPmnawheaNcnXGk/edit#heading=h.ckzjyjth7g9
+      title: Macro Design
+      icon: code     
+    - url: https://ertj.corp.costco.com/view/DataPower/job/_DataPower_build_gitHub/
+      title: jenkins
+      icon: code
 spec:
   type: openapi
   lifecycle: production
