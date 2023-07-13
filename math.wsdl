@@ -1,65 +1,80 @@
-<definitions name="math" xmlns="http://schemas.xmlsoap.org/wsdl/"
-             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-             xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"
-             xmlns:math="http://example.org/math"
-             targetNamespace="http://example.org/math">
-
-    <types>
-        <xs:schema targetNamespace="http://example.org/math" elementFormDefault="qualified">
-
-            <xs:element name="add">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="x" type="xs:double"/>
-                        <xs:element name="y" type="xs:double"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-            <xs:element name="answer">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="result" type="xs:double"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-
-        </xs:schema>
-    </types>
-
-    <message name="addMessage">
-        <part name="parameters" element="math:add"/>
-    </message>
-    <message name="resultMessage">
-        <part name="response" element="math:answer"/>
-    </message>
-
-    <portType name="WsMath">
-        <operation name="sum">
-            <input message="math:addMessage"/>
-            <output message="math:resultMessage"/>
-        </operation>
-    </portType>
-
-    <binding name="MathSoapHttpBinding" type="math:WsMath">
-        <soap:binding style="document"
-                      transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="sum">
-            <soap:operation soapAction="http://example.org/math/#sum"/>
-            <input>
-                <soap:body use="literal"/>
-            </input>
-            <output>
-                <soap:body use="literal"/>
-            </output>
-        </operation>
-    </binding>
-
-    <service name="MathService">
-        <port name="MathEndpoint" binding="math:MathSoapHttpBinding">
-            <soap:address location="math"/>
-        </port>
-    </service>
-
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: WarehouseLocator
+  title: Warehouse search API
+  description: Locate warehouse API interface with OpenAPI format.
+  annotations: 
+    github.com/project-slug: handysnacks/logistics
+    backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/x/mwCH
+    jenkins.io/job: OMS_EndPoint_Status_Update_Google_Chart
+  tags: 
+    - v1
+    - v2
+  links:
+    - url: https://costcointegration.atlassian.net/wiki/x/mwCH
+      title: confluencelink
+      icon: code
+    - url: https://dev70272.service-now.com/
+      title: ServiceNow Link
+      icon: code
+spec:
+  type: wsdl
+  lifecycle: ADT
+  owner: enterprise-services-development
+  providesApis:
+    - hello-world 
+  consumesApis: 
+    - Warehouse search API
+    - MobileApp
+  profile:
+    displayName: Enterprise Services Development
+    email: is-servicesdevelopment@costco.com
+  parent: engineers
+  children: [backstage, other]
+  members: [kseeber]
+  definition: | <definitions name = "HelloService"
+   targetNamespace = "http://www.examples.com/wsdl/HelloService.wsdl"
+   xmlns = "http://schemas.xmlsoap.org/wsdl/"
+   xmlns:soap = "http://schemas.xmlsoap.org/wsdl/soap/"
+   xmlns:tns = "http://www.examples.com/wsdl/HelloService.wsdl"
+   xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+   <message name = "SayHelloRequest">
+      <part name = "firstName" type = "xsd:string"/>
+   </message>
+   <message name = "SayHelloResponse">
+      <part name = "greeting" type = "xsd:string"/>
+   </message>
+   <portType name = "Hello_PortType">
+      <operation name = "sayHello">
+         <input message = "tns:SayHelloRequest"/>
+         <output message = "tns:SayHelloResponse"/>
+      </operation>
+   </portType>
+   <binding name = "Hello_Binding" type = "tns:Hello_PortType">
+      <soap:binding style = "rpc"
+         transport = "http://schemas.xmlsoap.org/soap/http"/>
+      <operation name = "sayHello">
+         <soap:operation soapAction = "sayHello"/>
+         <input>
+            <soap:body
+               encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/"
+               namespace = "urn:examples:helloservice"
+               use = "encoded"/>
+         </input>
+         <output>
+            <soap:body
+               encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/"
+               namespace = "urn:examples:helloservice"
+               use = "encoded"/>
+         </output>
+      </operation>
+   </binding>
+   <service name = "Hello_Service">
+      <documentation>WSDL File for HelloService</documentation>
+      <port binding = "tns:Hello_Binding" name = "Hello_Port">
+         <soap:address
+            location = "http://www.examples.com/SayHello/" />
+      </port>
+   </service>
 </definitions>
