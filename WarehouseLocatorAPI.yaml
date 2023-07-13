@@ -5,6 +5,7 @@ metadata:
   title: Warehouse search API
   description: Locate warehouse API interface with OpenAPI format.
   annotations: 
+    backstage.io/techdocs-ref: url:https://costcointegration.atlassian.net/wiki/spaces/
     github.com/project-slug: handysnacks/logistics
     jenkins.io/job: OMS_EndPoint_Status_Update_Google_Chart
   tags: 
